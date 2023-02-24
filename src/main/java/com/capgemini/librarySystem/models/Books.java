@@ -22,7 +22,6 @@ public class Books {
   }
 
   public Books() {
-    super();
   }
 
   public String getIsbn() {
