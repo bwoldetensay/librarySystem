@@ -45,14 +45,16 @@ public class BooksApiControllerTest {
   private BooksService mockBooksService;
 
   private static final UUID ISBN = UUID.randomUUID();
+  private static final String author = "author";
+  private static final String title = "title";
 
   @Nested
   @DisplayName("Given I want to get a book by their ISBN")
-  class GetBooksByISBN {
+  class GetBooksByISBNOrTitleOrAuthor {
 
     @Nested
     @DisplayName("When a book with the given ISBN exists")
-    class BookExists {
+    class BookISBNExists {
 
       private static final String TEST_URL = "/books/" + ISBN;
 
@@ -66,7 +68,6 @@ public class BooksApiControllerTest {
             .isbn(ISBN.toString())
             .build());
       }
-
       @Test
       @DisplayName("Then the book is returned")
       public void bookReturnedIfExists() throws Exception {
@@ -81,6 +82,67 @@ public class BooksApiControllerTest {
         ;
       }
     }
+    @Nested
+    @DisplayName("When a book with the given Title exists")
+    class BookTitleExists {
+
+      private static final String TEST_URL = "/books/" + title;
+
+      @BeforeEach
+      public void setUp() {
+
+        when(mockBooksService.getBooksByIsbn(title)).thenReturn(Books.builder()
+            .title("Eloquent JavaScript, Third Edition")
+            .author("Marijn Haverbeke")
+            .availability(true)
+            .isbn(ISBN.toString())
+            .build());
+      }
+      @Test
+      @DisplayName("Then the book is returned")
+      public void bookReturnedIfExists() throws Exception {
+        // given, when
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
+            .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
+            .andExpect(jsonPath("$.availability", is(true)))
+            .andExpect(jsonPath("$.isbn", is(ISBN.toString())))
+        ;
+      }
+    }
+
+      @Nested
+      @DisplayName("When a book with the given Author exists")
+      class BookAuthorExists {
+
+        private static final String TEST_URL = "/books/" + author;
+
+        @BeforeEach
+        public void setUp() {
+
+          when(mockBooksService.getBooksByIsbn(author)).thenReturn(Books.builder()
+              .title("Eloquent JavaScript, Third Edition")
+              .author("Marijn Haverbeke")
+              .availability(true)
+              .isbn(ISBN.toString())
+              .build());
+        }
+        @Test
+        @DisplayName("Then the book is returned")
+        public void bookReturnedIfExists() throws Exception {
+          // given, when
+          mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                  .contentType(MediaType.APPLICATION_JSON))
+              .andExpect(status().isOk())
+              .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
+              .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
+              .andExpect(jsonPath("$.availability", is(true)))
+              .andExpect(jsonPath("$.isbn", is(ISBN.toString())))
+          ;
+        }
+      }
   }
   @Nested
   @DisplayName("Given I want to get all books")
