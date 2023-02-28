@@ -86,12 +86,12 @@ public class BooksApiControllerTest {
     @DisplayName("When a book with the given Title exists")
     class BookTitleExists {
 
-      private static final String TEST_URL = "/books/" + title;
+      private static final String TEST_URL = "/title/" + title;
 
       @BeforeEach
       public void setUp() {
 
-        when(mockBooksService.getBooksByIsbn(title)).thenReturn(Books.builder()
+        when(mockBooksService.searchBooksByTitle(title)).thenReturn(Books.builder()
             .title("Eloquent JavaScript, Third Edition")
             .author("Marijn Haverbeke")
             .availability(true)
@@ -117,12 +117,12 @@ public class BooksApiControllerTest {
       @DisplayName("When a book with the given Author exists")
       class BookAuthorExists {
 
-        private static final String TEST_URL = "/books/" + author;
+        private static final String TEST_URL = "/author/" + author;
 
         @BeforeEach
         public void setUp() {
 
-          when(mockBooksService.getBooksByIsbn(author)).thenReturn(Books.builder()
+          when(mockBooksService.searchBooksByAuthor(author)).thenReturn(Books.builder()
               .title("Eloquent JavaScript, Third Edition")
               .author("Marijn Haverbeke")
               .availability(true)
@@ -232,7 +232,7 @@ public class BooksApiControllerTest {
       mockMvc.perform(MockMvcRequestBuilders.post(TEST_URL)
               .contentType(MediaType.APPLICATION_JSON)
           .content(mapper.writeValueAsString(book)))
-          .andExpect(status().isOk())
+          .andExpect(status().isCreated())
           .andExpect(jsonPath("$.title", is("SW Engineering for Dummies")))
           .andExpect(jsonPath("$.author", is("John Doe")))
           .andExpect(jsonPath("$.availability", is(true)))
