@@ -44,6 +44,11 @@ public class BooksApiController{
     logger.debug("findAllBooks");
     return booksService.getAllBooks();
   }
+  @GetMapping("/availability/{availability}")
+  public List<Books> findAllAvailableBooks(@PathVariable final Boolean availability){
+    logger.debug("findAllAvailableBooks");
+    return booksService.searchBooksByAvailability(availability);
+  }
   @GetMapping("books/{isbn}")
   public Books findBookByISBN(@PathVariable final String isbn){
     logger.debug("findBookByISBN()");

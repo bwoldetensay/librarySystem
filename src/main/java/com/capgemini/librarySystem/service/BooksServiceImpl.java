@@ -52,7 +52,11 @@ public class BooksServiceImpl implements BooksService {
     return booksRepository.findBooksByAuthor(author);
   }
 
-
+  @Override
+  public List<Books> searchBooksByAvailability(Boolean availability) {
+    logger.debug("searchBooksByAvailability");
+    return booksRepository.findBooksByAvailabilityIsTrue(true);
+  }
 
   @Override
   public Books addBook(Books book) {
