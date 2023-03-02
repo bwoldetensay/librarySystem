@@ -38,7 +38,7 @@ public class BooksServiceImpl implements BooksService {
   @Override
   public Books getBooksByIsbn(String isbn) {
     logger.debug("getBooksByIsbn");
-    return booksRepository.findById(isbn).orElseGet(Books::new);
+    return booksRepository.findBooksByIsbn(isbn);
   }
 
   @Override

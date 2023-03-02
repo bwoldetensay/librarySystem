@@ -6391,3 +6391,867 @@ java.lang.StackOverflowError: null
 2023-03-01 13:43:03,670 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
 2023-03-01 13:43:03,688 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
 2023-03-01 13:43:03,722 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 30 ms
+2023-03-01 15:10:14,308 INFO [http-nio-8080-exec-8] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,189 INFO [http-nio-8080-exec-5] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,222 INFO [http-nio-8080-exec-10] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,215 INFO [http-nio-8080-exec-8] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,224 INFO [http-nio-8080-exec-1] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,220 INFO [http-nio-8080-exec-2] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,222 INFO [http-nio-8080-exec-9] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,897 INFO [http-nio-8080-exec-9] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,897 INFO [http-nio-8080-exec-2] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:14:32,896 INFO [http-nio-8080-exec-1] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:26:18,211 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 298 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 15:26:18,230 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 15:26:18,360 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 15:26:18,364 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 15:26:19,392 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 15:26:19,463 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 66 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 15:26:20,090 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 15:26:20,097 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:26:20,099 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 15:26:20,099 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 15:26:20,152 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 15:26:20,153 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1787 ms
+2023-03-01 15:26:20,320 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@12b2a6c1]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 15:26:20,341 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:26:20,354 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:26:20,356 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:26:20,547 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 15:26:21,232 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=507955416, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 15:26:21 GMT 2023, lastUpdateTimeNanos=1549217892331625}
+2023-03-01 15:26:21,232 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=518859500, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 15:26:21 GMT 2023, lastUpdateTimeNanos=1549217892416333}
+2023-03-01 15:26:21,231 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=511420625, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 15:26:21 GMT 2023, lastUpdateTimeNanos=1549217891520458}
+2023-03-01 15:26:21,241 INFO [cluster-ClusterId{value='63ff6e9c5acff00062679b13', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 15:26:22,213 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:26:22,227 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 15:26:22,246 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 4.52 seconds (process running for 5.466)
+2023-03-01 15:27:04,572 INFO [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 15:27:04,575 INFO [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-03-01 15:27:04,582 INFO [http-nio-8080-exec-3] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 7 ms
+2023-03-01 15:27:27,509 INFO [http-nio-8080-exec-3] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,508 INFO [http-nio-8080-exec-2] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,508 INFO [http-nio-8080-exec-8] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,509 INFO [http-nio-8080-exec-7] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,508 INFO [http-nio-8080-exec-5] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,509 INFO [http-nio-8080-exec-6] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,509 INFO [http-nio-8080-exec-1] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,508 INFO [http-nio-8080-exec-9] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,509 INFO [http-nio-8080-exec-10] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:27:27,508 INFO [http-nio-8080-exec-4] o.a.c.h.Http11Processor [DirectJDKLog.java:175] The host [<calculated when request is sent>:8080] is not valid
+ Note: further occurrences of request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: null
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:78)
+	at org.apache.tomcat.util.http.parser.Host.parse(Host.java:45)
+	at org.apache.coyote.AbstractProcessor.parseHost(AbstractProcessor.java:300)
+	at org.apache.coyote.http11.Http11Processor.prepareRequest(Http11Processor.java:794)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:376)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 15:32:38,433 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2023-03-01 15:32:38,492 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:32:38,493 INFO [Thread-4] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-03-01 15:32:38,497 INFO [Thread-4] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-01 15:32:38,514 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:32:38,522 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:32:39,120 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 298 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 15:32:39,122 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 15:32:39,235 INFO [main] o.s.t.c.s.AnnotationConfigContextLoaderUtils [AnnotationConfigContextLoaderUtils.java:83] Could not detect default configuration classes for test class [com.capgemini.librarySystem.LibrarySystemApplicationTests]: LibrarySystemApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-03-01 15:32:39,454 INFO [main] o.s.b.t.c.SpringBootTestContextBootstrapper [SpringBootTestContextBootstrapper.java:247] Found @SpringBootConfiguration com.capgemini.librarySystem.LibrarySystemApplication for test class com.capgemini.librarySystem.LibrarySystemApplicationTests
+2023-03-01 15:32:39,460 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 15:32:39,479 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 18 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 15:32:39,618 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 15:32:39,620 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:32:39,620 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 15:32:39,621 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 15:32:39,636 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 15:32:39,637 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 507 ms
+2023-03-01 15:32:39,729 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@12b2a6c1]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 15:32:39,752 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:39,753 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:39,757 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:39,780 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 15:32:40,011 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=150610708, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 15:32:40 GMT 2023, lastUpdateTimeNanos=1549596705313458}
+2023-03-01 15:32:40,011 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=152030375, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 15:32:40 GMT 2023, lastUpdateTimeNanos=1549596706758500}
+2023-03-01 15:32:40,015 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 15:32:40,018 INFO [cluster-ClusterId{value='63ff70175acff00062679b14', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=159213541, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 15:32:40 GMT 2023, lastUpdateTimeNanos=1549596713964833}
+2023-03-01 15:32:40,111 INFO [main] c.c.l.LibrarySystemApplicationTests [StartupInfoLogger.java:51] Starting LibrarySystemApplicationTests using Java 17.0.4.1 with PID 818 (started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 15:32:40,115 INFO [main] c.c.l.LibrarySystemApplicationTests [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 15:32:40,461 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 15:32:40,463 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 15:32:40,471 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 1.554 seconds (process running for 383.724)
+2023-03-01 15:32:40,478 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2023-03-01 15:32:41,446 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 15:32:41,562 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 110 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 15:32:42,240 INFO [main] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@4816ee24]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 15:32:42,258 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:42,277 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:42,279 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 15:32:43,528 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=817731042, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 15:32:43 GMT 2023, lastUpdateTimeNanos=1549600204544875}
+2023-03-01 15:32:43,527 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=813736125, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 15:32:43 GMT 2023, lastUpdateTimeNanos=1549600204544791}
+2023-03-01 15:32:43,527 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=815891167, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 15:32:43 GMT 2023, lastUpdateTimeNanos=1549600204077625}
+2023-03-01 15:32:43,541 INFO [cluster-ClusterId{value='63ff701abc86db10c0ffe107', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 15:32:45,732 INFO [main] c.c.l.LibrarySystemApplicationTests [StartupInfoLogger.java:57] Started LibrarySystemApplicationTests in 6.046 seconds (process running for 8.13)
+2023-03-01 15:36:51,143 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 15:36:51,146 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-03-01 15:36:51,150 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 3 ms
+2023-03-01 19:13:01,973 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,974 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,973 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,973 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,974 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,973 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,973 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,974 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,974 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:01,974 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,193 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,197 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,197 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,197 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,202 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,202 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,202 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,203 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,203 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,203 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,246 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,247 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,247 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,246 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,246 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,247 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,253 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,258 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,258 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,258 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,291 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,291 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,291 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,295 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,295 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,295 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,302 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,302 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,302 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,303 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,356 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,356 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,360 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,392 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,392 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,392 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,396 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,396 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,397 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,397 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,409 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,409 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,409 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,432 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,432 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,432 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,444 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,443 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,444 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,443 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,460 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,460 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,460 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,469 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,469 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,473 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,488 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,488 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,488 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,488 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,494 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,495 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,495 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,497 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,504 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,506 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,522 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,522 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,522 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,522 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,530 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,530 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,530 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,536 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,534 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,541 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,559 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,566 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,566 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,582 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,591 WARN [http-nio-8080-exec-11] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,591 WARN [http-nio-8080-exec-13] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,591 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,593 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,593 WARN [http-nio-8080-exec-6] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,593 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,594 WARN [http-nio-8080-exec-1] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,601 WARN [http-nio-8080-exec-2] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,601 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:02,624 WARN [http-nio-8080-exec-12] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:13:16,972 WARN [http-nio-8080-exec-9] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:14:11,188 WARN [http-nio-8080-exec-3] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.capgemini.librarySystem.models.Books> com.capgemini.librarySystem.controllers.BooksApiController.saveBook(com.capgemini.librarySystem.models.Books)]
+2023-03-01 19:14:20,855 INFO [http-nio-8080-exec-13] o.a.c.h.Http11Processor [DirectJDKLog.java:175] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [{0x0a ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 19:14:51,726 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 16872 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 19:14:51,734 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 19:14:51,808 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 19:14:51,809 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 19:14:52,622 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 19:14:52,683 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 58 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 19:14:53,157 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 19:14:53,164 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 19:14:53,165 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 19:14:53,165 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 19:14:53,215 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 19:14:53,216 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1405 ms
+2023-03-01 19:14:53,400 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@9dcbafc]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 19:14:53,415 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 19:14:53,431 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 19:14:53,432 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 19:14:53,615 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 19:14:54,258 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=473168166, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 19:14:54 GMT 2023, lastUpdateTimeNanos=1562930898802375}
+2023-03-01 19:14:54,258 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=473395375, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 19:14:54 GMT 2023, lastUpdateTimeNanos=1562930899053458}
+2023-03-01 19:14:54,258 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=473235584, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 19:14:54 GMT 2023, lastUpdateTimeNanos=1562930899128000}
+2023-03-01 19:14:54,268 INFO [cluster-ClusterId{value='63ffa42d73a3445cf1c20837', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 19:14:55,111 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 19:14:55,126 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 19:14:55,137 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 3.848 seconds (process running for 4.721)
+2023-03-01 19:15:04,161 INFO [http-nio-8080-exec-2] o.a.c.h.Http11Processor [DirectJDKLog.java:175] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [{0x0a ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 19:15:50,475 INFO [http-nio-8080-exec-4] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 19:15:50,477 INFO [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-03-01 19:15:50,482 INFO [http-nio-8080-exec-4] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 4 ms
+2023-03-01 19:15:50,567 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.capgemini.librarySystem.models.Books> com.capgemini.librarySystem.controllers.BooksApiController.saveBook(com.capgemini.librarySystem.models.Books)]
+2023-03-01 19:21:21,960 INFO [http-nio-8080-exec-6] o.a.c.h.Http11Processor [DirectJDKLog.java:175] Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+java.lang.IllegalArgumentException: Invalid character found in method name [0x160x030x010x000xf70x010x000x000xf30x030x030xa50x8c0x9f0xf10xeb|0x8c{0x1dv0x950x160xacH0xa500xef0xfd0xe70xf2J0x89 ]. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:419)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:272)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:859)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1734)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-03-01 19:21:35,632 WARN [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.capgemini.librarySystem.models.Books> com.capgemini.librarySystem.controllers.BooksApiController.saveBook(com.capgemini.librarySystem.models.Books)]
+2023-03-01 19:22:18,130 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.http.converter.HttpMessageNotReadableException: Required request body is missing: public org.springframework.http.ResponseEntity<com.capgemini.librarySystem.models.Books> com.capgemini.librarySystem.controllers.BooksApiController.saveBook(com.capgemini.librarySystem.models.Books)]
+2023-03-01 19:26:00,532 WARN [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:29:53,802 WARN [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:37:04,144 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2023-03-01 19:46:05,687 WARN [http-nio-8080-exec-4] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:46:27,854 WARN [http-nio-8080-exec-7] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 19:48:36,775 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 21:38:58,176 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2023-03-01 21:38:58,233 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:38:58,234 INFO [Thread-4] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-03-01 21:38:58,237 INFO [Thread-4] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-01 21:38:58,254 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:38:58,262 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:38:58,837 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 16872 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:38:58,840 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:38:59,160 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 21:38:59,205 ERROR [restartedMain] o.s.b.SpringApplication [SpringApplication.java:820] Application run failed
+java.lang.TypeNotPresentException: Type com.capgemini.librarySystem.models.Books not present
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.visitor.Reifier.reifyTypeArguments(Reifier.java:68)
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:138)
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49)
+	at java.base/sun.reflect.generics.repository.ClassRepository.computeSuperInterfaces(ClassRepository.java:117)
+	at java.base/sun.reflect.generics.repository.ClassRepository.getSuperInterfaces(ClassRepository.java:95)
+	at java.base/java.lang.Class.getGenericInterfaces(Class.java:1211)
+	at org.springframework.core.ResolvableType.getInterfaces(ResolvableType.java:500)
+	at org.springframework.core.ResolvableType.as(ResolvableType.java:448)
+	at org.springframework.data.util.TypeDiscoverer.getSuperTypeInformation(TypeDiscoverer.java:250)
+	at org.springframework.data.util.ClassTypeInformation.getSuperTypeInformation(ClassTypeInformation.java:36)
+	at org.springframework.data.util.TypeInformation.getRequiredSuperTypeInformation(TypeInformation.java:327)
+	at org.springframework.data.repository.core.support.DefaultRepositoryMetadata.<init>(DefaultRepositoryMetadata.java:55)
+	at org.springframework.data.repository.core.support.AbstractRepositoryMetadata.getMetadata(AbstractRepositoryMetadata.java:77)
+	at org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport.getRepositoryConfigurations(RepositoryConfigurationExtensionSupport.java:91)
+	at org.springframework.data.repository.config.RepositoryConfigurationDelegate.registerRepositoriesIn(RepositoryConfigurationDelegate.java:163)
+	at org.springframework.boot.autoconfigure.data.AbstractRepositoryConfigurationSourceSupport.registerBeanDefinitions(AbstractRepositoryConfigurationSourceSupport.java:62)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:373)
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsFromRegistrars(ConfigurationClassBeanDefinitionReader.java:372)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitionsForConfigurationClass(ConfigurationClassBeanDefinitionReader.java:148)
+	at org.springframework.context.annotation.ConfigurationClassBeanDefinitionReader.loadBeanDefinitions(ConfigurationClassBeanDefinitionReader.java:120)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:410)
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:283)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:344)
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:115)
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:745)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:565)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.capgemini.librarySystem.LibrarySystemApplication.main(LibrarySystemApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.ClassNotFoundException: com.capgemini.librarySystem.models.Books
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:114)
+	... 41 common frames omitted
+2023-03-01 21:39:00,654 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 21:39:00,654 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 21:39:00,660 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 16872 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:39:00,661 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:39:00,953 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 21:39:00,970 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 16 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 21:39:01,156 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 21:39:01,160 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:39:01,161 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 21:39:01,161 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 21:39:01,175 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 21:39:01,176 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 512 ms
+2023-03-01 21:39:01,220 WARN [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:592] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'booksApiController': Unsatisfied dependency expressed through field 'booksService': No qualifying bean of type 'com.capgemini.librarySystem.service.BooksService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-03-01 21:39:01,221 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-03-01 21:39:01,233 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLogger [ConditionEvaluationReportLogger.java:82] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-01 21:39:01,249 ERROR [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter [LoggingFailureAnalysisReporter.java:40] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field booksService in com.capgemini.librarySystem.controllers.BooksApiController required a bean of type 'com.capgemini.librarySystem.service.BooksService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.capgemini.librarySystem.service.BooksService' in your configuration.
+
+2023-03-01 21:39:02,733 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 16872 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:39:02,734 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:39:02,945 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 21:39:02,960 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 14 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 21:39:03,037 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 21:39:03,039 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:39:03,040 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 21:39:03,040 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 21:39:03,048 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 21:39:03,048 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 308 ms
+2023-03-01 21:39:03,111 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@9dcbafc]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 21:39:03,162 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:39:03,167 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:39:03,170 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:39:03,182 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 21:39:03,685 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=308936667, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 21:39:03 GMT 2023, lastUpdateTimeNanos=1571580358335000}
+2023-03-01 21:39:03,687 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=311311625, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 21:39:03 GMT 2023, lastUpdateTimeNanos=1571580357286375}
+2023-03-01 21:39:03,684 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=313567959, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 21:39:03 GMT 2023, lastUpdateTimeNanos=1571580361563750}
+2023-03-01 21:39:03,980 INFO [cluster-ClusterId{value='63ffc5f773a3445cf1c20838', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 21:39:04,303 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:39:04,307 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 21:39:04,312 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 1.625 seconds (process running for 8653.951)
+2023-03-01 21:39:04,315 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2023-03-01 21:39:05,525 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:51] Starting BooksApiControllerTest using Java 17.0.4.1 with PID 27120 (started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:39:05,533 INFO [main] c.c.l.c.BooksApiControllerTest [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:39:08,484 INFO [main] o.s.b.t.m.w.SpringBootMockServletContext [MockServletContext.java:435] Initializing Spring TestDispatcherServlet ''
+2023-03-01 21:39:08,488 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:532] Initializing Servlet ''
+2023-03-01 21:39:08,498 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:554] Completed initialization in 4 ms
+2023-03-01 21:39:08,553 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:57] Started BooksApiControllerTest in 3.522 seconds (process running for 5.759)
+2023-03-01 21:40:01,728 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 27188 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:40:01,774 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:40:01,895 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 21:40:01,895 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 21:40:02,625 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 21:40:02,680 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 52 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 21:40:03,159 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 21:40:03,166 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:40:03,167 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 21:40:03,168 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 21:40:03,220 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 21:40:03,220 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1325 ms
+2023-03-01 21:40:03,445 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@aa8e2d]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 21:40:03,464 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:40:03,479 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:40:03,480 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 21:40:03,775 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 21:40:04,231 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=429892208, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 21:40:04 GMT 2023, lastUpdateTimeNanos=1571640928320875}
+2023-03-01 21:40:04,232 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=426658250, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 21:40:04 GMT 2023, lastUpdateTimeNanos=1571640928458750}
+2023-03-01 21:40:04,232 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=430325084, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 21:40:04 GMT 2023, lastUpdateTimeNanos=1571640927496208}
+2023-03-01 21:40:04,248 INFO [cluster-ClusterId{value='63ffc6332204ba2b6b7865a9', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 21:40:05,050 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 21:40:05,063 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 21:40:05,078 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 3.727 seconds (process running for 4.522)
+2023-03-01 21:42:16,705 INFO [http-nio-8080-exec-2] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 21:42:16,706 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-03-01 21:42:16,710 INFO [http-nio-8080-exec-2] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 4 ms
+2023-03-01 21:44:10,111 WARN [http-nio-8080-exec-5] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 21:44:51,981 WARN [http-nio-8080-exec-8] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]
+2023-03-01 21:52:58,162 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:51] Starting BooksApiControllerTest using Java 17.0.4.1 with PID 28044 (started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:52:58,174 INFO [main] c.c.l.c.BooksApiControllerTest [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:53:01,061 INFO [main] o.s.b.t.m.w.SpringBootMockServletContext [MockServletContext.java:435] Initializing Spring TestDispatcherServlet ''
+2023-03-01 21:53:01,064 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:532] Initializing Servlet ''
+2023-03-01 21:53:01,074 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:554] Completed initialization in 5 ms
+2023-03-01 21:53:01,119 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:57] Started BooksApiControllerTest in 3.451 seconds (process running for 5.233)
+2023-03-01 21:53:42,719 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:51] Starting BooksApiControllerTest using Java 17.0.4.1 with PID 28101 (started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 21:53:42,731 INFO [main] c.c.l.c.BooksApiControllerTest [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 21:53:45,706 INFO [main] o.s.b.t.m.w.SpringBootMockServletContext [MockServletContext.java:435] Initializing Spring TestDispatcherServlet ''
+2023-03-01 21:53:45,708 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:532] Initializing Servlet ''
+2023-03-01 21:53:45,723 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:554] Completed initialization in 4 ms
+2023-03-01 21:53:45,783 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:57] Started BooksApiControllerTest in 3.509 seconds (process running for 5.575)
+2023-03-01 22:20:48,319 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:211] Restarting due to 2 class path changes (0 additions, 2 deletions, 0 modifications)
+2023-03-01 22:20:48,361 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:48,364 INFO [Thread-4] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-03-01 22:20:48,367 INFO [Thread-4] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-01 22:20:48,385 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:48,391 INFO [Thread-4] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:48,938 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 27188 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 22:20:48,940 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 22:20:49,216 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 22:20:49,231 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 13 ms. Found 2 MongoDB repository interfaces.
+2023-03-01 22:20:49,347 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 22:20:49,349 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:49,349 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 22:20:49,350 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 22:20:49,366 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 22:20:49,366 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 417 ms
+2023-03-01 22:20:49,389 WARN [restartedMain] o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext [AbstractApplicationContext.java:592] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksApiController' defined in file [/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes/com/capgemini/librarySystem/controllers/BooksApiController.class]: com/capgemini/librarySystem/service/BooksServiceImpl
+2023-03-01 22:20:49,390 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2023-03-01 22:20:49,406 INFO [restartedMain] o.s.b.a.l.ConditionEvaluationReportLogger [ConditionEvaluationReportLogger.java:82] 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-03-01 22:20:49,421 ERROR [restartedMain] o.s.b.SpringApplication [SpringApplication.java:820] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'booksApiController' defined in file [/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes/com/capgemini/librarySystem/controllers/BooksApiController.class]: com/capgemini/librarySystem/service/BooksServiceImpl
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1306)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1198)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:561)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:521)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:961)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:915)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:584)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:308)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1302)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1291)
+	at com.capgemini.librarySystem.LibrarySystemApplication.main(LibrarySystemApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.NoClassDefFoundError: com/capgemini/librarySystem/service/BooksServiceImpl
+	at com.capgemini.librarySystem.controllers.BooksApiController.<clinit>(BooksApiController.java:27)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:197)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1300)
+	... 22 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.capgemini.librarySystem.service.BooksServiceImpl
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:467)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:121)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
+	... 31 common frames omitted
+2023-03-01 22:20:51,886 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 27188 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 22:20:51,886 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 22:20:52,116 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 22:20:52,139 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 22 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 22:20:52,232 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 22:20:52,238 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:52,239 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 22:20:52,240 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 22:20:52,248 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 22:20:52,249 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 358 ms
+2023-03-01 22:20:52,337 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@aa8e2d]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 22:20:52,362 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:20:52,367 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:20:52,371 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:20:52,409 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 22:20:52,681 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=229812583, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 22:20:52 GMT 2023, lastUpdateTimeNanos=1574089364549416}
+2023-03-01 22:20:52,681 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=229745416, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 22:20:52 GMT 2023, lastUpdateTimeNanos=1574089364483708}
+2023-03-01 22:20:52,682 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=223614167, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 22:20:52 GMT 2023, lastUpdateTimeNanos=1574089368363291}
+2023-03-01 22:20:52,698 INFO [cluster-ClusterId{value='63ffcfc42204ba2b6b7865aa', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 22:20:53,126 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:20:53,129 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 22:20:53,133 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 1.277 seconds (process running for 2452.569)
+2023-03-01 22:20:53,135 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2023-03-01 22:20:53,592 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:51] Starting BooksApiControllerTest using Java 17.0.4.1 with PID 30108 (started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 22:20:53,604 INFO [main] c.c.l.c.BooksApiControllerTest [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 22:20:56,533 INFO [main] o.s.b.t.m.w.SpringBootMockServletContext [MockServletContext.java:435] Initializing Spring TestDispatcherServlet ''
+2023-03-01 22:20:56,536 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:532] Initializing Servlet ''
+2023-03-01 22:20:56,548 INFO [main] o.s.t.w.s.TestDispatcherServlet [FrameworkServlet.java:554] Completed initialization in 5 ms
+2023-03-01 22:20:56,594 INFO [main] c.c.l.c.BooksApiControllerTest [StartupInfoLogger.java:57] Started BooksApiControllerTest in 3.498 seconds (process running for 5.545)
+2023-03-01 22:21:06,992 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:51] Starting LibrarySystemApplication using Java 17.0.4.1 with PID 30131 (/Users/berhanewoldetensay/Documents/Projects/librarySystem/target/classes started by berhanewoldentensay in /Users/berhanewoldetensay/Documents/Projects/librarySystem)
+2023-03-01 22:21:07,002 INFO [restartedMain] c.c.l.LibrarySystemApplication [SpringApplication.java:630] No active profile set, falling back to 1 default profile: "default"
+2023-03-01 22:21:07,083 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-01 22:21:07,084 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:250] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-01 22:21:07,815 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:138] Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2023-03-01 22:21:07,874 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:208] Finished Spring Data repository scanning in 55 ms. Found 3 MongoDB repository interfaces.
+2023-03-01 22:21:08,341 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2023-03-01 22:21:08,348 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:21:08,350 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2023-03-01 22:21:08,350 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/10.1.5]
+2023-03-01 22:21:08,401 INFO [restartedMain] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2023-03-01 22:21:08,401 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:291] Root WebApplicationContext: initialization completed in 1316 ms
+2023-03-01 22:21:08,576 INFO [restartedMain] o.m.d.client [SLF4JLogger.java:71] MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.8.2"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "x86_64", "version": "13.2"}, "platform": "Java/Amazon.com Inc./17.0.4.1+9-LTS"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=majority, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='admin', source='admin', password=<hidden>, mechanismProperties=<hidden>}, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@3b8bd75c]}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=cluster0.p3qhmib.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-1bi47o-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2023-03-01 22:21:08,585 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:21:08,598 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:21:08,600 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-srv-cluster0.p3qhmib.mongodb.net] o.m.d.cluster [SLF4JLogger.java:71] Adding discovered server ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 to client view of cluster
+2023-03-01 22:21:08,801 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2023-03-01 22:21:09,423 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=511970417, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c4219becb773e916f92, counter=4}, lastWriteDate=Wed Mar 01 22:21:09 GMT 2023, lastUpdateTimeNanos=1574106111320833}
+2023-03-01 22:21:09,423 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, type=REPLICA_SET_SECONDARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=513709833, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0cec4038b8d9c4b736b7, counter=3}, lastWriteDate=Wed Mar 01 22:21:09 GMT 2023, lastUpdateTimeNanos=1574106111782208}
+2023-03-01 22:21:09,422 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Monitor thread successfully connected to server with description ServerDescription{address=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, type=REPLICA_SET_PRIMARY, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=13, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=512658459, setName='atlas-1bi47o-shard-0', canonicalAddress=ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017, hosts=[ac-0757psl-shard-00-00.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-01.p3qhmib.mongodb.net:27017, ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017], passives=[], arbiters=[], primary='ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017', tagSet=TagSet{[Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='EU_WEST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000072, setVersion=7, topologyVersion=TopologyVersion{processId=63fd0c967f46a098686f4fa2, counter=6}, lastWriteDate=Wed Mar 01 22:21:09 GMT 2023, lastUpdateTimeNanos=1574106112043375}
+2023-03-01 22:21:09,431 INFO [cluster-ClusterId{value='63ffcfd43ecd2573eaf72375', description='null'}-ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017] o.m.d.cluster [SLF4JLogger.java:71] Discovered replica set primary ac-0757psl-shard-00-02.p3qhmib.mongodb.net:27017 with max election id 7fffffff0000000000000072 and max set version 7
+2023-03-01 22:21:10,142 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2023-03-01 22:21:10,156 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/api'
+2023-03-01 22:21:10,171 INFO [restartedMain] c.c.l.LibrarySystemApplication [StartupInfoLogger.java:57] Started LibrarySystemApplication in 3.629 seconds (process running for 4.521)
+2023-03-01 22:21:28,500 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/api] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-01 22:21:28,501 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:532] Initializing Servlet 'dispatcherServlet'
+2023-03-01 22:21:28,505 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:554] Completed initialization in 3 ms
+2023-03-01 22:29:33,688 WARN [http-nio-8080-exec-10] o.s.w.s.m.s.DefaultHandlerExceptionResolver [AbstractHandlerExceptionResolver.java:207] Resolved [org.springframework.web.HttpMediaTypeNotSupportedException: Content-Type 'text/plain;charset=UTF-8' is not supported]

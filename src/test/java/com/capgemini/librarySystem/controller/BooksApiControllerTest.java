@@ -62,6 +62,7 @@ public class BooksApiControllerTest {
       public void setUp() {
 
         when(mockBooksService.getBooksByIsbn(ISBN.toString())).thenReturn(Books.builder()
+            .id("1234")
             .title("Eloquent JavaScript, Third Edition")
             .author("Marijn Haverbeke")
             .availability(true)
@@ -75,6 +76,7 @@ public class BooksApiControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
+            .andExpect(jsonPath("$.id", is("1234")))
             .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
             .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
             .andExpect(jsonPath("$.availability", is(true)))
@@ -92,6 +94,7 @@ public class BooksApiControllerTest {
       public void setUp() {
 
         when(mockBooksService.searchBooksByTitle(title)).thenReturn(Books.builder()
+            .id("1234")
             .title("Eloquent JavaScript, Third Edition")
             .author("Marijn Haverbeke")
             .availability(true)
@@ -105,6 +108,7 @@ public class BooksApiControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
+            .andExpect(jsonPath("$.id", is("1234")))
             .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
             .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
             .andExpect(jsonPath("$.availability", is(true)))
@@ -123,6 +127,7 @@ public class BooksApiControllerTest {
         public void setUp() {
 
           when(mockBooksService.searchBooksByAuthor(author)).thenReturn(Books.builder()
+              .id("1234")
               .title("Eloquent JavaScript, Third Edition")
               .author("Marijn Haverbeke")
               .availability(true)
@@ -136,11 +141,11 @@ public class BooksApiControllerTest {
           mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                   .contentType(MediaType.APPLICATION_JSON))
               .andExpect(status().isOk())
+              .andExpect(jsonPath("$.id", is("1234")))
               .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
               .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
               .andExpect(jsonPath("$.availability", is(true)))
-              .andExpect(jsonPath("$.isbn", is(ISBN.toString())))
-          ;
+              .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
         }
       }
   }
@@ -160,6 +165,7 @@ public class BooksApiControllerTest {
       public void setUp() {
 
         Books book1 = Books.builder()
+            .id("1234")
             .isbn(ISBN.toString())
             .title("Eloquent JavaScript, Third Edition")
             .author("Marijn Haverbeke")
@@ -167,6 +173,7 @@ public class BooksApiControllerTest {
             .build();
 
         Books book2 = Books.builder()
+            .id("5678")
             .isbn(ISBN2.toString())
             .title("Practical Modern JavaScript")
             .author("Nicolás Bevacqua")
@@ -225,14 +232,16 @@ public class BooksApiControllerTest {
 
     @Test
     public void bookAddSuccess() throws Exception {
-      Books book = new Books(ISBN.toString(),"SW Engineering for Dummies","John Doe",true );
-      Books bookToReturn = new Books(ISBN.toString(),"SW Engineering for Dummies","John Doe",true );
+      Books book = new Books("1234",ISBN.toString(),"SW Engineering for Dummies","John Doe",true );
+      Books bookToReturn = new Books("1234",ISBN.toString(),"SW Engineering for Dummies","John Doe",
+          true );
       doReturn(bookToReturn).when(mockBooksService).addBook(any());
 
       mockMvc.perform(MockMvcRequestBuilders.post(TEST_URL)
               .contentType(MediaType.APPLICATION_JSON)
           .content(mapper.writeValueAsString(book)))
           .andExpect(status().isCreated())
+          .andExpect(jsonPath("$.id", is("1234")))
           .andExpect(jsonPath("$.title", is("SW Engineering for Dummies")))
           .andExpect(jsonPath("$.author", is("John Doe")))
           .andExpect(jsonPath("$.availability", is(true)))
