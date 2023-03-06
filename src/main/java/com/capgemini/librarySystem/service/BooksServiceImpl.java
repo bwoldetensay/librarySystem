@@ -9,6 +9,7 @@ import lombok.ToString;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -53,19 +54,18 @@ public class BooksServiceImpl implements BooksService {
   }
 
   @Override
-  public List<Books> searchBooksByAvailability(Boolean availability) {
+  public Books searchBooksByAvailability(Boolean availability) {
     logger.debug("searchBooksByAvailability");
-    return booksRepository.findBooksByAvailabilityIsTrue(true);
+    return booksRepository.findBooksByAvailabilityIsTrue(availability);
   }
-
   @Override
   public Books addBook(Books book) {
-    User userType = new User();
-    if(userRepository.existsByUserType(userType.getUserType())) {
-      booksRepository.save(book);
-    }
-//    return booksRepository.save(book);
     logger.debug("addBook");
-    return book;
+    return booksRepository.save(book);
+  }
+  @Override
+  public Books deleteBookById(String id) {
+    logger.debug("delete book by Id");
+    return booksRepository.deleteBooksById(id);
   }
 }

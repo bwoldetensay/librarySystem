@@ -13,7 +13,7 @@ public interface BooksRepository extends MongoRepository<Books, String> {
    Books findBooksByAuthor(String author);
    Books findBooksByTitle(String title);
    Books findBooksByIsbn(String isbn);
-
-   List<Books> findBooksByAvailabilityIsTrue(Boolean availability);
+   Books deleteBooksById(String id);
+   Books findBooksByAvailabilityIsTrue(Boolean availability);
 
 }

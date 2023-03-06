@@ -11,6 +11,7 @@ public interface BooksService {
   Books searchBooksByTitle(String title);
   Books searchBooksByAuthor(String author);
   Books addBook(Books book);
-  List<Books> searchBooksByAvailability(Boolean availability);
+  Books searchBooksByAvailability(Boolean availability);
+  Books deleteBookById (String id);
 
 }
