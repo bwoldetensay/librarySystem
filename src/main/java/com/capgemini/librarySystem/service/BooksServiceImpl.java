@@ -41,6 +41,11 @@ public class BooksServiceImpl implements BooksService {
     logger.debug("getBooksByIsbn");
     return booksRepository.findBooksByIsbn(isbn);
   }
+  @Override
+  public Books getBookById(String id) {
+    logger.debug("getBooksByIsbn");
+    return booksRepository.findBooksById(id);
+  }
 
   @Override
   public Books searchBooksByTitle(String title) {
@@ -54,12 +59,17 @@ public class BooksServiceImpl implements BooksService {
   }
 
   @Override
-  public Books searchBooksByAvailability(Boolean availability) {
+  public List<Books> searchBooksByAvailability(Boolean availability) {
     logger.debug("searchBooksByAvailability");
-    return booksRepository.findBooksByAvailabilityIsTrue(availability);
+    return booksRepository.findBooksByAvailabilityIsTrue(true);
   }
   @Override
   public Books addBook(Books book) {
+    logger.debug("addBook");
+    return booksRepository.save(book);
+  }
+  @Override
+  public Books returnBook(Books book) {
     logger.debug("addBook");
     return booksRepository.save(book);
   }

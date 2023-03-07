@@ -1,11 +1,14 @@
 package com.capgemini.librarySystem.controller;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.hasValue;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.doReturn;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -170,14 +173,28 @@ public class BooksApiControllerTest {
 
       @BeforeEach
       public void setUp() {
+        Books book1 = Books.builder()
+            .id(id.toString())
+            .isbn(ISBN.toString())
+            .title("Eloquent JavaScript, Third Edition")
+            .author("Marijn Haverbeke")
+            .availability(true)
+            .build();
+        Books book2 = Books.builder()
+            .id("5678")
+            .isbn(ISBN.toString())
+            .title("Practical Modern JavaScript")
+            .author("Nicolás Bevacqua")
+            .availability(true)
+            .build();
 
-        when(mockBooksService.searchBooksByAvailability(true)).thenReturn(Books.builder()
-                .id("1234")
-                .title("Eloquent JavaScript, Third Edition")
-                .author("Marijn Haverbeke")
-                .availability(true)
-                .isbn(ISBN.toString())
-                .build());
+        when(mockBooksService.searchBooksByAvailability(true)).thenReturn(List.of(book1,book2));
+//                .id("1234")
+//                .title("Eloquent JavaScript, Third Edition")
+//                .author("Marijn Haverbeke")
+//                .availability(true)
+//                .isbn(ISBN.toString())
+//                .build());
       }
       @Test
       @DisplayName("Available Books Returned")
@@ -186,11 +203,11 @@ public class BooksApiControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$.id", is("1234")))
-            .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
-            .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
-            .andExpect(jsonPath("$.availability", is(true)))
-            .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
+            .andExpect(jsonPath("$[*].title", containsInAnyOrder("Eloquent JavaScript, Third Edition", "Practical Modern JavaScript")))
+            .andExpect(jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
+            .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true,true)))
+            .andExpect(jsonPath("$[*].isbn", containsInAnyOrder(ISBN.toString(),
+                ISBN.toString())));
       }
     }
   }
@@ -283,7 +300,7 @@ public class BooksApiControllerTest {
           true );
       doReturn(bookToReturn).when(mockBooksService).addBook(any());
 
-      mockMvc.perform(MockMvcRequestBuilders.post(TEST_URL)
+      mockMvc.perform(post(TEST_URL)
               .contentType(MediaType.APPLICATION_JSON)
           .content(mapper.writeValueAsString(book)))
           .andExpect(status().isCreated())
@@ -314,28 +331,27 @@ public class BooksApiControllerTest {
   @Nested
   @DisplayName("Update Books")
   class UpdateBooks{
-    private static final String TEST_URL = "/id/" + id;
-    Books book1 = new Books(id.toString(), "isbn", "title","author", false);
+    private static final String TEST_URL = "/id/" + id.toString();
     private ObjectMapper mapper = new ObjectMapper();
     @Test
     @DisplayName("Check-in Book")
     void shouldUpdateBook() throws Exception {
-      Books updatedRecord = Books.builder()
-          .id(id.toString())
-          .build();
+      Books book = new Books("1234","5678","SW Engineering for Dummies","John Doe",false );
+      Books bookToReturn = new Books("1234","5678","SW Engineering for Dummies","John Doe",
+          false );
+      when(mockBooksService.getBookById(id.toString())).thenReturn(book);
+      when(mockBooksService.addBook(any(Books.class))).thenReturn(bookToReturn);
 
-      Mockito.when(mockBooksRepository.findById(book1.getId())).thenReturn(Optional.of(book1));
-      Mockito.when(mockBooksRepository.save(updatedRecord)).thenReturn(updatedRecord);
-
-      MockHttpServletRequestBuilder mockRequest = MockMvcRequestBuilders.post(TEST_URL)
-          .contentType(MediaType.APPLICATION_JSON)
-          .accept(MediaType.APPLICATION_JSON)
-          .content(this.mapper.writeValueAsString(updatedRecord));
-
-      mockMvc.perform(mockRequest)
+      mockMvc.perform(MockMvcRequestBuilders.put(TEST_URL)
+              .contentType(MediaType.APPLICATION_JSON)
+              .content(mapper.writeValueAsString(bookToReturn)))
           .andExpect(status().isOk())
-          .andExpect(jsonPath("$", notNullValue()))
-          .andExpect(jsonPath("$.availability", is(false)));
+          .andExpect(jsonPath("$.id", is(bookToReturn.getId())))
+          .andExpect(jsonPath("$.isbn", is(bookToReturn.getIsbn())))
+          .andExpect(jsonPath("$.title", is(bookToReturn.getTitle())))
+          .andExpect(jsonPath("$.author", is(bookToReturn.getAuthor())))
+          .andExpect(jsonPath("$.availability", is(bookToReturn.isAvailability())))
+          .andDo(print());
     }
 
   }
