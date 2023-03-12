@@ -20,6 +20,7 @@ import com.capgemini.librarySystem.models.Books;
 import com.capgemini.librarySystem.repository.BooksRepository;
 import com.capgemini.librarySystem.service.BooksService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -29,6 +30,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -47,13 +49,16 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 @WebMvcTest(controllers = {BooksApiController.class})
 @WebAppConfiguration
 public class BooksApiControllerTest {
+
   @Autowired
   BooksApiController booksApiController;
+
   @Test
   @DisplayName("Testing if Application Loads Correctly")
   public void contextLoads() {
     Assertions.assertThat(booksApiController).isNotNull();
   }
+
   @Autowired
   private MockMvc mockMvc;
   @MockBean
@@ -87,6 +92,7 @@ public class BooksApiControllerTest {
             .isbn(ISBN.toString())
             .build());
       }
+
       @Test
       @DisplayName("Book is returned with given ISBN")
       public void bookWithIsbnReturned() throws Exception {
@@ -102,6 +108,7 @@ public class BooksApiControllerTest {
         ;
       }
     }
+
     @Nested
     @DisplayName("Test Book With Given Title Exists")
     class BookWithTitleExists {
@@ -119,6 +126,7 @@ public class BooksApiControllerTest {
             .isbn(ISBN.toString())
             .build());
       }
+
       @Test
       @DisplayName("Book is returned with Given Title")
       public void bookWithTitleReturned() throws Exception {
@@ -134,37 +142,39 @@ public class BooksApiControllerTest {
       }
     }
 
-      @Nested
-      @DisplayName("Test Book With Given Author Exists")
-      class BookWithAuthorExists {
+    @Nested
+    @DisplayName("Test Book With Given Author Exists")
+    class BookWithAuthorExists {
 
-        private static final String TEST_URL = "/author/" + author;
+      private static final String TEST_URL = "/author/" + author;
 
-        @BeforeEach
-        public void setUp() {
+      @BeforeEach
+      public void setUp() {
 
-          when(mockBooksService.searchBooksByAuthor(author)).thenReturn(Books.builder()
-              .id("1234")
-              .title("Eloquent JavaScript, Third Edition")
-              .author("Marijn Haverbeke")
-              .availability(true)
-              .isbn(ISBN.toString())
-              .build());
-        }
-        @Test
-        @DisplayName("Book With Author Returned")
-        public void bookWithAuthorReturned() throws Exception {
-          // given, when
-          mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
-                  .contentType(MediaType.APPLICATION_JSON))
-              .andExpect(status().isOk())
-              .andExpect(jsonPath("$.id", is("1234")))
-              .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
-              .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
-              .andExpect(jsonPath("$.availability", is(true)))
-              .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
-        }
+        when(mockBooksService.searchBooksByAuthor(author)).thenReturn(Books.builder()
+            .id("1234")
+            .title("Eloquent JavaScript, Third Edition")
+            .author("Marijn Haverbeke")
+            .availability(true)
+            .isbn(ISBN.toString())
+            .build());
       }
+
+      @Test
+      @DisplayName("Book With Author Returned")
+      public void bookWithAuthorReturned() throws Exception {
+        // given, when
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$.id", is("1234")))
+            .andExpect(jsonPath("$.title", is("Eloquent JavaScript, Third Edition")))
+            .andExpect(jsonPath("$.author", is("Marijn Haverbeke")))
+            .andExpect(jsonPath("$.availability", is(true)))
+            .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
+      }
+    }
+
     @Nested
     @DisplayName("Test Books which are Available")
     class TestOnlyAvailableBooks {
@@ -188,7 +198,7 @@ public class BooksApiControllerTest {
             .availability(true)
             .build();
 
-        when(mockBooksService.searchBooksByAvailability(true)).thenReturn(List.of(book1,book2));
+        when(mockBooksService.searchBooksByAvailability(true)).thenReturn(List.of(book1, book2));
 //                .id("1234")
 //                .title("Eloquent JavaScript, Third Edition")
 //                .author("Marijn Haverbeke")
@@ -196,6 +206,7 @@ public class BooksApiControllerTest {
 //                .isbn(ISBN.toString())
 //                .build());
       }
+
       @Test
       @DisplayName("Available Books Returned")
       public void returnAvailableBooks() throws Exception {
@@ -203,14 +214,18 @@ public class BooksApiControllerTest {
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$[*].title", containsInAnyOrder("Eloquent JavaScript, Third Edition", "Practical Modern JavaScript")))
-            .andExpect(jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
-            .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true,true)))
+            .andExpect(jsonPath("$[*].title",
+                containsInAnyOrder("Eloquent JavaScript, Third Edition",
+                    "Practical Modern JavaScript")))
+            .andExpect(
+                jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
+            .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true, true)))
             .andExpect(jsonPath("$[*].isbn", containsInAnyOrder(ISBN.toString(),
                 ISBN.toString())));
       }
     }
   }
+
   @Nested
   @DisplayName("Given I want to get all books")
   class GetAllBooks {
@@ -249,13 +264,15 @@ public class BooksApiControllerTest {
       @DisplayName("List of Books Returned")
       public void booksListIsReturned() throws Exception {
 
-
         // given, when
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$[*].title", containsInAnyOrder("Eloquent JavaScript, Third Edition", "Practical Modern JavaScript")))
-            .andExpect(jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
+            .andExpect(jsonPath("$[*].title",
+                containsInAnyOrder("Eloquent JavaScript, Third Edition",
+                    "Practical Modern JavaScript")))
+            .andExpect(
+                jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
             .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true && false,
                 true && false)))
             .andExpect(jsonPath("$[*].isbn", containsInAnyOrder(ISBN.toString(),
@@ -287,7 +304,8 @@ public class BooksApiControllerTest {
 
   @Nested
   @DisplayName("Add books")
-  class AddBook{
+  class AddBook {
+
     private static final String TEST_URL = "/book";
 
     private static final UUID ISBN = UUID.randomUUID();
@@ -295,14 +313,17 @@ public class BooksApiControllerTest {
 
     @Test
     public void bookAddSuccess() throws Exception {
-      Books book = new Books("1234",ISBN.toString(),"SW Engineering for Dummies","John Doe",true );
-      Books bookToReturn = new Books("1234",ISBN.toString(),"SW Engineering for Dummies","John Doe",
-          true );
+      Books book = new Books("1234", ISBN.toString(), "SW Engineering for Dummies", "John Doe",
+          true,
+          LocalDateTime.now().toString());
+      Books bookToReturn = new Books("1234", ISBN.toString(), "SW Engineering for Dummies",
+          "John Doe",
+          true, LocalDateTime.now().toString());
       doReturn(bookToReturn).when(mockBooksService).addBook(any());
 
       mockMvc.perform(post(TEST_URL)
               .contentType(MediaType.APPLICATION_JSON)
-          .content(mapper.writeValueAsString(book)))
+              .content(mapper.writeValueAsString(book)))
           .andExpect(status().isCreated())
           .andExpect(jsonPath("$.id", is("1234")))
           .andExpect(jsonPath("$.title", is("SW Engineering for Dummies")))
@@ -311,34 +332,40 @@ public class BooksApiControllerTest {
           .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
     }
   }
+
   @Nested
   @DisplayName("Delete books")
-  class DeleteBooks{
+  class DeleteBooks {
+
     private static final String TEST_URL = "/id/" + id;
     private ObjectMapper mapper = new ObjectMapper();
+
     @Test
     public void shouldDeleteBook() throws Exception {
       mockMvc.perform(MockMvcRequestBuilders
               .delete(TEST_URL)
               .param("id", id.toString())
               .contentType(MediaType.APPLICATION_JSON))
-              .andExpect(status().isNoContent());
-
-  }
+          .andExpect(status().isNoContent());
 
     }
 
+  }
+
   @Nested
   @DisplayName("Update Books")
-  class UpdateBooks{
-    private static final String TEST_URL = "/id/" + id.toString();
+  class UpdateBooks {
+
+    private static final String TEST_URL = "/checkIn/" + id.toString();
     private ObjectMapper mapper = new ObjectMapper();
+
     @Test
     @DisplayName("Check-in Book")
     void shouldUpdateBook() throws Exception {
-      Books book = new Books("1234","5678","SW Engineering for Dummies","John Doe",false );
-      Books bookToReturn = new Books("1234","5678","SW Engineering for Dummies","John Doe",
-          false );
+      Books book = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe", false,
+          LocalDateTime.now().toString());
+      Books bookToReturn = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe",
+          true, LocalDateTime.now().toString());
       when(mockBooksService.getBookById(id.toString())).thenReturn(book);
       when(mockBooksService.addBook(any(Books.class))).thenReturn(bookToReturn);
 
@@ -353,6 +380,29 @@ public class BooksApiControllerTest {
           .andExpect(jsonPath("$.availability", is(bookToReturn.isAvailability())))
           .andDo(print());
     }
+  }
 
+  @Nested
+  @DisplayName("Check-Out Book")
+  public class BooKsCheckOutControllerTest {
+    private static final String TEST_URL = "/checkOut/" + id.toString();
+    private ObjectMapper mapper = new ObjectMapper();
+
+    @Test
+    @DisplayName("Checking-Out Book success")
+    public void testCheckoutBook_Success() throws Exception {
+      // Arrange
+      Books books = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe", true,
+          LocalDateTime.now().toString());
+      books.setAvailability(false);
+      books.setCheckedOutUntil(LocalDateTime.now().plusDays(7).toString());
+      when(mockBooksService.getBookById(id.toString())).thenReturn(books);
+
+      mockMvc.perform(MockMvcRequestBuilders.put(TEST_URL)
+              .contentType(MediaType.APPLICATION_JSON)
+              .content(mapper.writeValueAsString(books)))
+          .andExpect(status().isOk())
+          .andDo(print());
+    }
   }
 }

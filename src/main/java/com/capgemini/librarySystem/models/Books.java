@@ -14,13 +14,15 @@ public class Books {
   private String title;
   private String author;
   private boolean availability;
+  private String checkedOutUntil;
 
-  public Books(String id, String isbn, String title, String author, boolean availability) {
+  public Books(String id, String isbn, String title, String author, boolean availability, String checkedOutUntil) {
     this.id = id;
     this.isbn = isbn;
     this.title = title;
     this.author = author;
     this.availability = availability;
+    this.checkedOutUntil = checkedOutUntil;
   }
 
   public Books() {
@@ -66,6 +68,14 @@ public class Books {
     this.availability = availability;
   }
 
+  public String getCheckedOutUntil() {
+    return checkedOutUntil;
+  }
+
+  public void setCheckedOutUntil(String checkedOutUntil) {
+    this.checkedOutUntil = checkedOutUntil;
+  }
+
   @Override
   public String toString() {
     return "Books{" +
@@ -74,6 +84,7 @@ public class Books {
         ", title='" + title + '\'' +
         ", author='" + author + '\'' +
         ", availability=" + availability +
+        ", checkedOutUntil='" + checkedOutUntil + '\'' +
         '}';
   }
 }

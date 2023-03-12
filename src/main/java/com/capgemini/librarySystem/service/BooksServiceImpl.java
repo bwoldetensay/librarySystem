@@ -27,15 +27,6 @@ public class BooksServiceImpl implements BooksService {
     return booksRepository.findAll();
   }
 
-//  @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
-//  @Override
-//  public List<Books> searchBooks(String keyword) {
-//    if (keyword != null) {
-//      return booksRepository.searchAllBy(keyword);
-//    }
-//    return booksRepository.findAll();
-//  }
-
   @Override
   public Books getBooksByIsbn(String isbn) {
     logger.debug("getBooksByIsbn");

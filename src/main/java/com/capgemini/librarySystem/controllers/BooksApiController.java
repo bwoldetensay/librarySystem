@@ -3,7 +3,7 @@ package com.capgemini.librarySystem.controllers;
 import com.capgemini.librarySystem.models.Books;
 import com.capgemini.librarySystem.service.BooksService;
 import com.capgemini.librarySystem.service.BooksServiceImpl;
-import jakarta.servlet.http.HttpServletRequest;
+import java.time.LocalDateTime;
 import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -71,11 +70,21 @@ public class BooksApiController{
       return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
-  @PutMapping("/id/{id}")
-  public Books updateBook(@RequestBody Books book, @PathVariable String id){
+  @PutMapping("/checkIn/{id}")
+  public Books checkInBook(@RequestBody Books book, @PathVariable String id){
     book.getId();
+    logger.debug(book.getId(),"getBookByAuthor()");
     book.setAvailability(true);
-     return booksService.addBook(book);
+    book.setCheckedOutUntil(LocalDateTime.now().toString());
+    return booksService.addBook(book);
+  }
+
+  @PutMapping("/checkOut/{id}")
+  public Books checkOutBook(@RequestBody Books book, @PathVariable String id){
+    book.getId();
+    book.setAvailability(false);
+    book.setCheckedOutUntil(LocalDateTime.now().plusDays(7).toString());
+    return booksService.addBook(book);
   }
 
 }
