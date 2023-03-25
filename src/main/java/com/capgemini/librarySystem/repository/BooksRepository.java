@@ -1,6 +1,7 @@
 package com.capgemini.librarySystem.repository;
 
 import com.capgemini.librarySystem.models.Books;
+import java.time.LocalDateTime;
 import java.util.List;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
@@ -16,5 +17,6 @@ public interface BooksRepository extends MongoRepository<Books, String> {
    Books deleteBooksById(String id);
    Books findBooksById(String id);
    List<Books> findBooksByAvailabilityIsTrue(Boolean availability);
+   List<Books> findBooksByBorrowingPeriodInDays(Long remainingDays);
 
 }

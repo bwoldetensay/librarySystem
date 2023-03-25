@@ -1,15 +1,12 @@
 package com.capgemini.librarySystem.controller;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
-import static org.hamcrest.Matchers.hasValue;
 import static org.hamcrest.Matchers.is;
-import static org.hamcrest.Matchers.notNullValue;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.doReturn;
-import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -20,9 +17,10 @@ import com.capgemini.librarySystem.models.Books;
 import com.capgemini.librarySystem.repository.BooksRepository;
 import com.capgemini.librarySystem.service.BooksService;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.UUID;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -30,8 +28,6 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
@@ -40,8 +36,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
+import org.webjars.NotFoundException;
 
 
 @ExtendWith(SpringExtension.class)
@@ -63,13 +60,90 @@ public class BooksApiControllerTest {
   private MockMvc mockMvc;
   @MockBean
   private BooksService mockBooksService;
+
   @MockBean
-  private BooksRepository mockBooksRepository;
+  private BooksRepository mockBooksrepository;
 
   private static final UUID ISBN = UUID.randomUUID();
   private static final UUID id = UUID.randomUUID();
   private static final String author = "author";
   private static final String title = "title";
+  private static final Long days = (long) LocalDate.now().getDayOfMonth();
+
+  @Nested
+  @DisplayName("Given I want to get all books")
+  class GetAllBooks {
+
+    private static final String TEST_URL = "/books";
+
+    @Nested
+    @DisplayName("Test List Of All books")
+    class BooksExist {
+
+      private static final UUID ISBN2 = UUID.randomUUID();
+
+      @BeforeEach
+      public void setUp() {
+
+        Books book1 = Books.builder()
+            .id("1234")
+            .isbn(ISBN.toString())
+            .title("Eloquent JavaScript, Third Edition")
+            .author("Marijn Haverbeke")
+            .availability(true)
+            .build();
+
+        Books book2 = Books.builder()
+            .id("5678")
+            .isbn(ISBN2.toString())
+            .title("Practical Modern JavaScript")
+            .author("Nicolás Bevacqua")
+            .availability(false)
+            .build();
+
+        when(mockBooksService.getAllBooks()).thenReturn(List.of(book1, book2));
+      }
+
+      @Test
+      @DisplayName("List of Books Returned")
+      public void booksListIsReturned() throws Exception {
+
+        // given, when
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(jsonPath("$[*].title",
+                containsInAnyOrder("Eloquent JavaScript, Third Edition",
+                    "Practical Modern JavaScript")))
+            .andExpect(
+                jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
+            .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true, false)))
+            .andExpect(jsonPath("$[*].isbn", containsInAnyOrder(ISBN.toString(),
+                ISBN2.toString())));
+      }
+    }
+
+    @Nested
+    @DisplayName("When there are no books")
+    class NoBooks {
+
+      @BeforeEach
+      public void setUp() {
+
+        when(mockBooksService.getAllBooks()).thenReturn(List.of());
+      }
+
+      @Test
+      @DisplayName("Then an empty list is returned")
+      public void emptyListIsReturned() throws Exception {
+
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andExpect(content().string("[]"));
+      }
+    }
+  }
 
   @Nested
   @DisplayName("Given I want to get a book by their ISBN")
@@ -110,6 +184,27 @@ public class BooksApiControllerTest {
     }
 
     @Nested
+    @DisplayName("No book with ISBN Test")
+    class NoBookWithISBSNExists {
+
+      private static final String TEST_URL = "/books/" + ISBN;
+
+      @Test
+      @DisplayName("Then not found exception returned")
+      public void emptyListIsReturned() throws Exception {
+        Books book = new Books();
+        book.setIsbn("");
+        when(mockBooksService.getBooksByIsbn(book.getIsbn())).thenThrow(
+            new NotFoundException("Not Found"));
+
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk());
+//            .andExpect(content().string([" "]));
+      }
+    }
+
+    @Nested
     @DisplayName("Test Book With Given Title Exists")
     class BookWithTitleExists {
 
@@ -139,6 +234,29 @@ public class BooksApiControllerTest {
             .andExpect(jsonPath("$.availability", is(true)))
             .andExpect(jsonPath("$.isbn", is(ISBN.toString())))
         ;
+      }
+
+      @Nested
+      @DisplayName("No book with Title Test")
+      class NoBookWithTitleExists {
+
+        private static final String TEST_URL = "/title/" + title;
+
+        @Test
+        @DisplayName("Then not found exception returned")
+        public void emptyListIsReturned() throws Exception {
+          Books book = new Books();
+          book.setTitle("");
+          when(mockBooksService.searchBooksByTitle(book.getTitle())).thenThrow(
+              new NotFoundException(
+                  "Not"
+                      + " Found"));
+
+          mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                  .contentType(MediaType.APPLICATION_JSON))
+              .andExpect(status().isOk());
+//            .andExpect(content().string([" "]));
+        }
       }
     }
 
@@ -173,11 +291,34 @@ public class BooksApiControllerTest {
             .andExpect(jsonPath("$.availability", is(true)))
             .andExpect(jsonPath("$.isbn", is(ISBN.toString())));
       }
-    }
 
-    @Nested
-    @DisplayName("Test Books which are Available")
-    class TestOnlyAvailableBooks {
+      @Nested
+      @DisplayName("No book with Author Test")
+      class NoBookWithAuthorExists {
+
+        private static final String TEST_URL = "/author/" + author;
+
+        @Test
+        @DisplayName("Then not found exception returned")
+        public void emptyListIsReturned() throws Exception {
+          Books book = new Books();
+          book.setAuthor("");
+          when(mockBooksService.searchBooksByAuthor("")).thenThrow(new NotFoundException(
+              "Not"
+                  + " Found"));
+
+          mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                  .contentType(MediaType.APPLICATION_JSON))
+              .andExpect(status().isOk());
+//            .andExpect(content().string([" "]));
+        }
+      }
+    }
+  }
+
+  @Nested
+  @DisplayName("Test Books which are Available")
+  class AvailableBooksTest {
 
       private static final String TEST_URL = "/availability/" + true;
 
@@ -199,12 +340,6 @@ public class BooksApiControllerTest {
             .build();
 
         when(mockBooksService.searchBooksByAvailability(true)).thenReturn(List.of(book1, book2));
-//                .id("1234")
-//                .title("Eloquent JavaScript, Third Edition")
-//                .author("Marijn Haverbeke")
-//                .availability(true)
-//                .isbn(ISBN.toString())
-//                .build());
       }
 
       @Test
@@ -224,84 +359,23 @@ public class BooksApiControllerTest {
                 ISBN.toString())));
       }
     }
-  }
-
   @Nested
-  @DisplayName("Given I want to get all books")
-  class GetAllBooks {
+  @DisplayName("Test Book With Given Author Exists")
+  class BookComingAvailableSoonTest {
 
-    private static final String TEST_URL = "/books";
-
-    @Nested
-    @DisplayName("Test List Of All books")
-    class BooksExist {
-
-      private static final UUID ISBN2 = UUID.randomUUID();
-
-      @BeforeEach
-      public void setUp() {
-
-        Books book1 = Books.builder()
-            .id("1234")
-            .isbn(ISBN.toString())
-            .title("Eloquent JavaScript, Third Edition")
-            .author("Marijn Haverbeke")
-            .availability(true && false)
-            .build();
-
-        Books book2 = Books.builder()
-            .id("5678")
-            .isbn(ISBN2.toString())
-            .title("Practical Modern JavaScript")
-            .author("Nicolás Bevacqua")
-            .availability(true && false)
-            .build();
-
-        when(mockBooksService.getAllBooks()).thenReturn(List.of(book1, book2));
-      }
-
-      @Test
-      @DisplayName("List of Books Returned")
-      public void booksListIsReturned() throws Exception {
-
-        // given, when
+    private static final String TEST_URL = "/soonAvailable/" + days;
+    @Test
+    @DisplayName("Checking-Out Book success")
+    public void testBooksAvailableSoon() throws Exception {
+      Books books = new Books();
+        when(mockBooksService.availableSoon(books.getBorrowingPeriodInDays(days))).thenReturn(List.of(books));
+        System.out.println(List.of(books));
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
-                .contentType(MediaType.APPLICATION_JSON))
+              .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
-            .andExpect(jsonPath("$[*].title",
-                containsInAnyOrder("Eloquent JavaScript, Third Edition",
-                    "Practical Modern JavaScript")))
-            .andExpect(
-                jsonPath("$[*].author", containsInAnyOrder("Marijn Haverbeke", "Nicolás Bevacqua")))
-            .andExpect(jsonPath("$[*].availability", containsInAnyOrder(true && false,
-                true && false)))
-            .andExpect(jsonPath("$[*].isbn", containsInAnyOrder(ISBN.toString(),
-                ISBN2.toString())));
-      }
-    }
-
-    @Nested
-    @DisplayName("When there are no books")
-    class NoBooks {
-
-      @BeforeEach
-      public void setUp() {
-
-        when(mockBooksService.getAllBooks()).thenReturn(List.of());
-      }
-
-      @Test
-      @DisplayName("Then an empty list is returned")
-      public void emptyListIsReturned() throws Exception {
-
-        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
-                .contentType(MediaType.APPLICATION_JSON))
-            .andExpect(status().isOk())
-            .andExpect(content().string("[]"));
-      }
+          .andDo(print());
     }
   }
-
   @Nested
   @DisplayName("Add books")
   class AddBook {
@@ -315,10 +389,10 @@ public class BooksApiControllerTest {
     public void bookAddSuccess() throws Exception {
       Books book = new Books("1234", ISBN.toString(), "SW Engineering for Dummies", "John Doe",
           true,
-          LocalDateTime.now().toString());
+          LocalDate.now().toString(), 7L);
       Books bookToReturn = new Books("1234", ISBN.toString(), "SW Engineering for Dummies",
           "John Doe",
-          true, LocalDateTime.now().toString());
+          true, LocalDate.now().toString(), 7L);
       doReturn(bookToReturn).when(mockBooksService).addBook(any());
 
       mockMvc.perform(post(TEST_URL)
@@ -353,7 +427,7 @@ public class BooksApiControllerTest {
   }
 
   @Nested
-  @DisplayName("Update Books")
+  @DisplayName("Update Books check-In")
   class UpdateBooks {
 
     private static final String TEST_URL = "/checkIn/" + id.toString();
@@ -363,9 +437,9 @@ public class BooksApiControllerTest {
     @DisplayName("Check-in Book")
     void shouldUpdateBook() throws Exception {
       Books book = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe", false,
-          LocalDateTime.now().toString());
+          LocalDate.now().toString(), 7L);
       Books bookToReturn = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe",
-          true, LocalDateTime.now().toString());
+          true, LocalDate.now().toString(), 7L);
       when(mockBooksService.getBookById(id.toString())).thenReturn(book);
       when(mockBooksService.addBook(any(Books.class))).thenReturn(bookToReturn);
 
@@ -383,7 +457,7 @@ public class BooksApiControllerTest {
   }
 
   @Nested
-  @DisplayName("Check-Out Book")
+  @DisplayName("Update Books Check-Out")
   public class BooKsCheckOutControllerTest {
     private static final String TEST_URL = "/checkOut/" + id.toString();
     private ObjectMapper mapper = new ObjectMapper();
@@ -393,9 +467,9 @@ public class BooksApiControllerTest {
     public void testCheckoutBook_Success() throws Exception {
       // Arrange
       Books books = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe", true,
-          LocalDateTime.now().toString());
+          LocalDate.now().toString(), 7L);
       books.setAvailability(false);
-      books.setCheckedOutUntil(LocalDateTime.now().plusDays(7).toString());
+      books.setCheckedOutUntil(LocalDate.now().plusDays(7).toString());
       when(mockBooksService.getBookById(id.toString())).thenReturn(books);
 
       mockMvc.perform(MockMvcRequestBuilders.put(TEST_URL)

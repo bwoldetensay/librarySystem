@@ -9,7 +9,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @OpenAPIDefinition(info = @Info(title = "Library System API", version = "1.0", description = "library of reference books for engineers"))
 public class LibrarySystemApplication {
 	public static void main(String[] args) {
+
 		SpringApplication.run(LibrarySystemApplication.class, args);
+
 	}
 
 }

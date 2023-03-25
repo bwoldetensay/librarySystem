@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BooksServiceImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">librarySystem</a> &gt; <a href="index.source.html" class="el_package">com.capgemini.librarySystem.service</a> &gt; <span class="el_source">BooksServiceImpl.java</span></div><h1>BooksServiceImpl.java</h1><pre class="source lang-java linenums">package com.capgemini.librarySystem.service;
+
+import com.capgemini.librarySystem.models.Books;
+import com.capgemini.librarySystem.models.User;
+import com.capgemini.librarySystem.repository.BooksRepository;
+import com.capgemini.librarySystem.repository.UserRepository;
+import java.util.List;
+import lombok.ToString;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+@Service
+<span class="nc" id="L16">public class BooksServiceImpl implements BooksService {</span>
+<span class="nc" id="L17">  private static final Logger logger = LoggerFactory.getLogger(BooksServiceImpl.class);</span>
+
+  @Autowired
+  BooksRepository booksRepository;
+  @Autowired
+  UserRepository userRepository;
+
+  @Override
+  public List&lt;Books&gt; getAllBooks() {
+<span class="nc" id="L26">    logger.debug(&quot;getAllBooks()&quot;);</span>
+<span class="nc" id="L27">    return booksRepository.findAll();</span>
+  }
+
+  @Override
+  public Books getBooksByIsbn(String isbn) {
+<span class="nc" id="L32">    logger.debug(&quot;getBooksByIsbn&quot;);</span>
+<span class="nc" id="L33">    return booksRepository.findBooksByIsbn(isbn);</span>
+  }
+  @Override
+  public Books getBookById(String id) {
+<span class="nc" id="L37">    logger.debug(&quot;getBooksByIsbn&quot;);</span>
+<span class="nc" id="L38">    return booksRepository.findBooksById(id);</span>
+  }
+
+  @Override
+  public Books searchBooksByTitle(String title) {
+<span class="nc" id="L43">    logger.debug(&quot;searchBooksByTitle&quot;);</span>
+<span class="nc" id="L44">    return booksRepository.findBooksByTitle(title);</span>
+  }
+  @Override
+  public Books searchBooksByAuthor(String author) {
+<span class="nc" id="L48">    logger.debug(&quot;searchBooksByAuthor&quot;);</span>
+<span class="nc" id="L49">    return booksRepository.findBooksByAuthor(author);</span>
+  }
+
+  @Override
+  public List&lt;Books&gt; searchBooksByAvailability(Boolean availability) {
+<span class="nc" id="L54">    logger.debug(&quot;searchBooksByAvailability&quot;);</span>
+<span class="nc" id="L55">    return booksRepository.findBooksByAvailabilityIsTrue(true);</span>
+  }
+  @Override
+  public Books addBook(Books book) {
+<span class="nc" id="L59">    logger.debug(&quot;addBook&quot;);</span>
+<span class="nc" id="L60">    return booksRepository.save(book);</span>
+  }
+  @Override
+  public Books returnBook(Books book) {
+<span class="nc" id="L64">    logger.debug(&quot;addBook&quot;);</span>
+<span class="nc" id="L65">    return booksRepository.save(book);</span>
+  }
+  @Override
+  public Books deleteBookById(String id) {
+<span class="nc" id="L69">    logger.debug(&quot;delete book by Id&quot;);</span>
+<span class="nc" id="L70">    return booksRepository.deleteBooksById(id);</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

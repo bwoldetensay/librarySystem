@@ -16,13 +16,25 @@ public class Books {
   private boolean availability;
   private String checkedOutUntil;
 
-  public Books(String id, String isbn, String title, String author, boolean availability, String checkedOutUntil) {
+  private Long borrowingPeriodInDays;
+
+  public Long getBorrowingPeriodInDays(Long days) {
+    return borrowingPeriodInDays;
+  }
+
+  public void setBorrowingPeriodInDays(Long borrowingPeriodInDays) {
+    this.borrowingPeriodInDays = borrowingPeriodInDays;
+  }
+
+  public Books(String id, String isbn, String title, String author, boolean availability,
+      String checkedOutUntil, Long borrowingPeriodInDays) {
     this.id = id;
     this.isbn = isbn;
     this.title = title;
     this.author = author;
     this.availability = availability;
     this.checkedOutUntil = checkedOutUntil;
+    this.borrowingPeriodInDays = borrowingPeriodInDays;
   }
 
   public Books() {
@@ -85,6 +97,7 @@ public class Books {
         ", author='" + author + '\'' +
         ", availability=" + availability +
         ", checkedOutUntil='" + checkedOutUntil + '\'' +
+        ", borrowingPeriodInDays=" + borrowingPeriodInDays +
         '}';
   }
 }

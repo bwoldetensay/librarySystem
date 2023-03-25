@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BooksApiController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">librarySystem</a> &gt; <a href="index.source.html" class="el_package">com.capgemini.librarySystem.controllers</a> &gt; <span class="el_source">BooksApiController.java</span></div><h1>BooksApiController.java</h1><pre class="source lang-java linenums">package com.capgemini.librarySystem.controllers;
+
+import com.capgemini.librarySystem.models.Books;
+import com.capgemini.librarySystem.service.BooksService;
+import com.capgemini.librarySystem.service.BooksServiceImpl;
+import java.time.LocalDateTime;
+import java.util.List;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping(&quot;/&quot;)
+<span class="nc" id="L24">public class BooksApiController{</span>
+<span class="nc" id="L25">  private static final Logger logger = LoggerFactory.getLogger(BooksServiceImpl.class);</span>
+
+  @Autowired
+  private BooksService booksService;
+
+  @GetMapping(&quot;/books&quot;)
+  public List&lt;Books&gt; findAllBooks(){
+<span class="nc" id="L32">    logger.debug(&quot;findAllBooks&quot;);</span>
+<span class="nc" id="L33">    return booksService.getAllBooks();</span>
+  }
+  @GetMapping(&quot;/availability/{availability}&quot;)
+  public List&lt;Books&gt; findAllAvailableBooks(@PathVariable final Boolean availability){
+<span class="nc" id="L37">    logger.debug(&quot;findAllAvailableBooks&quot;);</span>
+<span class="nc" id="L38">    return booksService.searchBooksByAvailability(availability);</span>
+  }
+  @GetMapping(&quot;books/{isbn}&quot;)
+  public Books findBookByISBN(@PathVariable final String isbn){
+<span class="nc" id="L42">    logger.debug(&quot;findBookByISBN()&quot;);</span>
+<span class="nc" id="L43">    return booksService.getBooksByIsbn(isbn);</span>
+  }
+  @GetMapping( &quot;/title/{title}&quot;)
+  public Books getBookByTitle(@PathVariable(&quot;title&quot;) String title){
+<span class="nc" id="L47">    logger.debug(&quot;getBookByTitle()&quot;);</span>
+<span class="nc" id="L48">    return booksService.searchBooksByTitle(title);</span>
+  }
+
+  @GetMapping( &quot;/author/{author}&quot;)
+  public Books getBookByAuthor(@PathVariable(&quot;author&quot;) String author){
+<span class="nc" id="L53">    logger.debug(&quot;getBookByAuthor()&quot;);</span>
+<span class="nc" id="L54">    return booksService.searchBooksByAuthor(author);</span>
+  }
+  @PostMapping(&quot;/book&quot;)
+  public ResponseEntity&lt;Books&gt; saveBook(@RequestBody Books book){
+<span class="nc" id="L58">    book  = booksService.addBook(book);</span>
+<span class="nc bnc" id="L59" title="All 2 branches missed.">    if(book == null)</span>
+<span class="nc" id="L60">      return new ResponseEntity&lt;&gt;(HttpStatus.NOT_ACCEPTABLE);</span>
+<span class="nc" id="L61">    return  new ResponseEntity&lt;&gt;(book, HttpStatus.CREATED);</span>
+  }
+
+  @DeleteMapping(&quot;/id/{id}&quot;)
+  public ResponseEntity&lt;HttpStatus&gt; deleteBook(@PathVariable(&quot;id&quot;) String id) {
+    try {
+<span class="nc" id="L67">      booksService.deleteBookById(id);</span>
+<span class="nc" id="L68">      return new ResponseEntity&lt;&gt;(HttpStatus.NO_CONTENT);</span>
+<span class="nc" id="L69">    } catch (Exception e) {</span>
+<span class="nc" id="L70">      return new ResponseEntity&lt;&gt;(HttpStatus.INTERNAL_SERVER_ERROR);</span>
+    }
+  }
+  @PutMapping(&quot;/checkIn/{id}&quot;)
+  public Books checkInBook(@RequestBody Books book, @PathVariable String id){
+<span class="nc" id="L75">    book.getId();</span>
+<span class="nc" id="L76">    logger.debug(book.getId(),&quot;getBookByAuthor()&quot;);</span>
+<span class="nc" id="L77">    book.setAvailability(true);</span>
+<span class="nc" id="L78">    book.setCheckedOutUntil(LocalDateTime.now().toString());</span>
+<span class="nc" id="L79">    return booksService.addBook(book);</span>
+  }
+
+  @PutMapping(&quot;/checkOut/{id}&quot;)
+  public Books checkOutBook(@RequestBody Books book, @PathVariable String id){
+<span class="nc" id="L84">    book.getId();</span>
+<span class="nc" id="L85">    book.setAvailability(false);</span>
+<span class="nc" id="L86">    book.setCheckedOutUntil(LocalDateTime.now().plusDays(7).toString());</span>
+<span class="nc" id="L87">    return booksService.addBook(book);</span>
+  }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

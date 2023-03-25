@@ -1,6 +1,7 @@
 package com.capgemini.librarySystem.service;
 
 import com.capgemini.librarySystem.models.Books;
+import java.time.LocalDateTime;
 import java.util.List;
 
 public interface BooksService {
@@ -12,9 +13,11 @@ public interface BooksService {
   Books searchBooksByTitle(String title);
   Books searchBooksByAuthor(String author);
   Books addBook(Books book);
-  Books returnBook(Books book);
+  Books saveReturnedBook(Books book);
   List<Books> searchBooksByAvailability(Boolean availability);
   Books deleteBookById (String id);
+
+  List<Books> availableSoon (Long days);
 
 
 }

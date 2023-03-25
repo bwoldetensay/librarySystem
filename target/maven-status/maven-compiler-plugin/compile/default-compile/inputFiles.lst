@@ -4,15 +4,10 @@
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/models/User.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/service/UserServiceImpl.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/models/Role.java
-/Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/component/BsonTimestampToLocalDateTimeConverter.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/repository/RoleRepository.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/repository/UserRepository.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/models/Books.java
-/Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/component/LocalDateTimeWriteConverter.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/controllers/BooksApiController.java
-/Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/config/AppConfig.java
-/Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/config/MongoConfig.java
-/Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/component/LocalDateTimeReadConverter.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/repository/BooksRepository.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/models/ERole.java
 /Users/berhanewoldetensay/Documents/Projects/librarySystem/src/main/java/com/capgemini/librarySystem/config/OpenApiConfig.java

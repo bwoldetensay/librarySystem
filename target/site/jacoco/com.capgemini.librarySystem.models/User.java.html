@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>User.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">librarySystem</a> &gt; <a href="index.source.html" class="el_package">com.capgemini.librarySystem.models</a> &gt; <span class="el_source">User.java</span></div><h1>User.java</h1><pre class="source lang-java linenums">package com.capgemini.librarySystem.models;
+
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
+import java.util.HashSet;
+import java.util.Set;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.DBRef;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection  = &quot;users&quot;)
+public class User {
+  @Id
+  private String id;
+  private String userType;
+
+  @NotBlank
+  @Size(max = 50)
+  @Email
+  private String email;
+
+<span class="nc" id="L23">  @DBRef</span>
+  private Set&lt;Role&gt; roles = new HashSet&lt;&gt;();
+
+<span class="nc" id="L26">  public User() {</span>
+<span class="nc" id="L27">  }</span>
+
+<span class="nc" id="L29">  public User(String userType, String email) {</span>
+<span class="nc" id="L30">    this.userType = userType;</span>
+<span class="nc" id="L31">    this.email = email;</span>
+<span class="nc" id="L32">  }</span>
+
+  public String getId() {
+<span class="nc" id="L35">    return id;</span>
+  }
+
+  public void setId(String id) {
+<span class="nc" id="L39">    this.id = id;</span>
+<span class="nc" id="L40">  }</span>
+
+  public String getUserType() {
+<span class="nc" id="L43">    return userType;</span>
+  }
+
+  public void setUserType(String userType) {
+<span class="nc" id="L47">    this.userType = userType;</span>
+<span class="nc" id="L48">  }</span>
+
+  public String getEmail() {
+<span class="nc" id="L51">    return email;</span>
+  }
+
+  public void setEmail(String email) {
+<span class="nc" id="L55">    this.email = email;</span>
+<span class="nc" id="L56">  }</span>
+
+  public Set&lt;Role&gt; getRoles() {
+<span class="nc" id="L59">    return roles;</span>
+  }
+
+  public void setRoles(Set&lt;Role&gt; roles) {
+<span class="nc" id="L63">    this.roles = roles;</span>
+<span class="nc" id="L64">  }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

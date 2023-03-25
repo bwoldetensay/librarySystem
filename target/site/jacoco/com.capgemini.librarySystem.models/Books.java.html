@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Books.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">librarySystem</a> &gt; <a href="index.source.html" class="el_package">com.capgemini.librarySystem.models</a> &gt; <span class="el_source">Books.java</span></div><h1>Books.java</h1><pre class="source lang-java linenums">package com.capgemini.librarySystem.models;
+import lombok.Builder;
+import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+<span class="nc bnc" id="L7" title="All 50 branches missed.">@Data</span>
+<span class="nc" id="L8">@Builder</span>
+@Document(collection = &quot;books&quot;)
+public class Books {
+  @Id
+  private String id;
+  private String isbn;
+  private String title;
+  private String author;
+  private boolean availability;
+  private String checkedOutUntil;
+
+<span class="nc" id="L19">  public Books(String id, String isbn, String title, String author, boolean availability, String checkedOutUntil) {</span>
+<span class="nc" id="L20">    this.id = id;</span>
+<span class="nc" id="L21">    this.isbn = isbn;</span>
+<span class="nc" id="L22">    this.title = title;</span>
+<span class="nc" id="L23">    this.author = author;</span>
+<span class="nc" id="L24">    this.availability = availability;</span>
+<span class="nc" id="L25">    this.checkedOutUntil = checkedOutUntil;</span>
+<span class="nc" id="L26">  }</span>
+
+<span class="nc" id="L28">  public Books() {</span>
+<span class="nc" id="L29">  }</span>
+
+  public String getId() {
+<span class="nc" id="L32">    return id;</span>
+  }
+
+  public void setId(String id) {
+<span class="nc" id="L36">    this.id = id;</span>
+<span class="nc" id="L37">  }</span>
+
+  public String getIsbn() {
+<span class="nc" id="L40">    return isbn;</span>
+  }
+
+  public void setIsbn(String isbn) {
+<span class="nc" id="L44">    this.isbn = isbn;</span>
+<span class="nc" id="L45">  }</span>
+
+  public String getTitle() {
+<span class="nc" id="L48">    return title;</span>
+  }
+
+  public void setTitle(String title) {
+<span class="nc" id="L52">    this.title = title;</span>
+<span class="nc" id="L53">  }</span>
+
+  public String getAuthor() {
+<span class="nc" id="L56">    return author;</span>
+  }
+
+  public void setAuthor(String author) {
+<span class="nc" id="L60">    this.author = author;</span>
+<span class="nc" id="L61">  }</span>
+
+  public boolean isAvailability() {
+<span class="nc" id="L64">    return availability;</span>
+  }
+
+  public void setAvailability(boolean availability) {
+<span class="nc" id="L68">    this.availability = availability;</span>
+<span class="nc" id="L69">  }</span>
+
+  public String getCheckedOutUntil() {
+<span class="nc" id="L72">    return checkedOutUntil;</span>
+  }
+
+  public void setCheckedOutUntil(String checkedOutUntil) {
+<span class="nc" id="L76">    this.checkedOutUntil = checkedOutUntil;</span>
+<span class="nc" id="L77">  }</span>
+
+  @Override
+  public String toString() {
+<span class="nc" id="L81">    return &quot;Books{&quot; +</span>
+        &quot;id='&quot; + id + '\'' +
+        &quot;, isbn='&quot; + isbn + '\'' +
+        &quot;, title='&quot; + title + '\'' +
+        &quot;, author='&quot; + author + '\'' +
+        &quot;, availability=&quot; + availability +
+        &quot;, checkedOutUntil='&quot; + checkedOutUntil + '\'' +
+        '}';
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
