@@ -18,5 +18,6 @@ public interface BooksRepository extends MongoRepository<Books, String> {
    Books findBooksById(String id);
    List<Books> findBooksByAvailabilityIsTrue(Boolean availability);
    List<Books> findBooksByBorrowingPeriodInDays(Long remainingDays);
+//   List<Books> findAllBy(Long days);
 
 }

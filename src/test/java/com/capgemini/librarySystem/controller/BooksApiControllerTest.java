@@ -3,7 +3,6 @@ package com.capgemini.librarySystem.controller;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.Matchers.is;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -14,12 +13,9 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import com.capgemini.librarySystem.LibrarySystemApplication;
 import com.capgemini.librarySystem.controllers.BooksApiController;
 import com.capgemini.librarySystem.models.Books;
-import com.capgemini.librarySystem.repository.BooksRepository;
 import com.capgemini.librarySystem.service.BooksService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 import org.assertj.core.api.Assertions;
@@ -37,7 +33,6 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import org.webjars.NotFoundException;
 
 
@@ -61,8 +56,8 @@ public class BooksApiControllerTest {
   @MockBean
   private BooksService mockBooksService;
 
-  @MockBean
-  private BooksRepository mockBooksrepository;
+//  @MockBean
+//  private BooksRepository mockBooksrepository;
 
   private static final UUID ISBN = UUID.randomUUID();
   private static final UUID id = UUID.randomUUID();
@@ -439,7 +434,7 @@ public class BooksApiControllerTest {
       Books book = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe", false,
           LocalDate.now().toString(), 7L);
       Books bookToReturn = new Books("1234", "5678", "SW Engineering for Dummies", "John Doe",
-          true, LocalDate.now().toString(), 7L);
+          true, LocalDate.now().toString(), 0L);
       when(mockBooksService.getBookById(id.toString())).thenReturn(book);
       when(mockBooksService.addBook(any(Books.class))).thenReturn(bookToReturn);
 

@@ -3,6 +3,7 @@ package com.capgemini.librarySystem.service;
 import com.capgemini.librarySystem.models.Books;
 import java.time.LocalDateTime;
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 public interface BooksService {
 
@@ -18,6 +19,10 @@ public interface BooksService {
   Books deleteBookById (String id);
 
   List<Books> availableSoon (Long days);
+
+  Books checkInAndCheckOut (Books book);
+  List<Books> searchBooksOverDue();
+  List<Books> frequentLateReturns();
 
 
 }

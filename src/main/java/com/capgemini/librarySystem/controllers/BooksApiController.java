@@ -39,7 +39,6 @@ public class BooksApiController {
     LOGGER.addHandler(fileHandler);
 
   }
-
   @Autowired
   private BooksService booksService;
 
@@ -48,32 +47,27 @@ public class BooksApiController {
     LOGGER.log(Level.INFO, "find all books" + booksService.getAllBooks());
     return booksService.getAllBooks();
   }
-
   @GetMapping("/availability/{availability}")
   public List<Books> findAllAvailableBooks(@PathVariable final Boolean availability) {
     LOGGER.log(Level.INFO,
         "findAllAvailableBooks" + booksService.searchBooksByAvailability(availability));
     return booksService.searchBooksByAvailability(availability);
   }
-
   @GetMapping("books/{isbn}")
   public Books findBookByISBN(@PathVariable final String isbn) {
     LOGGER.log(Level.INFO, "findBookByISBN", booksService.getBooksByIsbn(isbn));
     return booksService.getBooksByIsbn(isbn);
   }
-
   @GetMapping("/title/{title}")
   public Books getBookByTitle(@PathVariable("title") String title) {
     LOGGER.log(Level.INFO, "getBookByTitle", booksService.searchBooksByTitle(title));
     return booksService.searchBooksByTitle(title);
   }
-
   @GetMapping("/author/{author}")
   public Books getBookByAuthor(@PathVariable("author") String author) {
     LOGGER.log(Level.INFO, "getBookByAuthor", booksService.searchBooksByAuthor(author));
     return booksService.searchBooksByAuthor(author);
   }
-
   @PostMapping("/book")
   public ResponseEntity<Books> saveBook(@RequestBody Books book) {
     book = booksService.addBook(book);
@@ -85,7 +79,6 @@ public class BooksApiController {
       return new ResponseEntity<>(book, HttpStatus.CREATED);
     }
   }
-
   @DeleteMapping("/id/{id}")
   public ResponseEntity<HttpStatus> deleteBook(@PathVariable("id") String id) {
     try {
@@ -98,7 +91,6 @@ public class BooksApiController {
       return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
     }
   }
-
   @PutMapping("/checkIn/{id}")
   public Books checkInBook(@RequestBody Books book, @PathVariable String id) {
     book.getId();
@@ -107,7 +99,6 @@ public class BooksApiController {
     LOGGER.log(Level.INFO, "Book checked in", booksService.addBook(book));
     return booksService.addBook(book);
   }
-
   @PutMapping("/checkOut/{id}")
   public Books checkOutBook(@RequestBody Books book, @PathVariable String id) {
     book.getId();
@@ -116,12 +107,21 @@ public class BooksApiController {
     LOGGER.log(Level.INFO, "Book checked out", booksService.addBook(book));
     return booksService.addBook(book);
   }
-
   @GetMapping("/soonAvailable/{days}")
   public List<Books> findBooksAvailableSoon(@PathVariable("days") Long days) {
     LOGGER.log(Level.INFO, "Book checked out",
         booksService.availableSoon(days));
     return booksService.availableSoon(days);
-
   }
+  @PutMapping("/checkin-checkout/{id}")
+  public Books adminCheckinCheckout(@RequestBody Books book,
+      @PathVariable String id) {
+   return booksService.checkInAndCheckOut(book);
+  }
+  @GetMapping("/overdue-books")
+  public List<Books> getAllOverDueBooks(){
+
+    return booksService.searchBooksOverDue();
+  }
+
 }
