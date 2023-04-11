@@ -1,5 +1,10 @@
 package com.capgemini.librarySystem.service;
 
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.group;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.match;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.newAggregation;
+import static org.springframework.data.mongodb.core.aggregation.Aggregation.project;
+
 import com.capgemini.librarySystem.controllers.BooksApiController;
 import com.capgemini.librarySystem.models.Books;
 import com.capgemini.librarySystem.repository.BooksRepository;
@@ -13,6 +18,7 @@ import java.util.logging.Logger;
 import java.util.logging.SimpleFormatter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.aggregation.Aggregation;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Service;
@@ -137,13 +143,13 @@ public class BooksServiceImpl implements BooksService {
     List<Books> results = mongoTemplate.find(query, Books.class);
     return results;
   }
-
   @Override
   public List<Books> frequentLateReturns() {
+    Criteria criteria = new Criteria();
     Query query = new Query();
-    query.addCriteria(Criteria.where("borrowingPeriodInDays")
-        .gt(7L));
-    List<Books> results = mongoTemplate.find(query, Books.class);
-    return results;
+    criteria.andOperator(Criteria.where("borrowingPeriodInDays")
+        .gt(7L).and("availability").is(true));
+    query.addCriteria(criteria);
+    return mongoTemplate.find(query, Books.class);
   }
 }

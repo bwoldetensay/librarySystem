@@ -27,6 +27,9 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.core.query.Criteria;
+import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
@@ -55,6 +58,8 @@ public class BooksApiControllerTest {
   private MockMvc mockMvc;
   @MockBean
   private BooksService mockBooksService;
+  @MockBean
+  private MongoTemplate mongoTemplate;
 
 //  @MockBean
 //  private BooksRepository mockBooksrepository;
@@ -277,6 +282,7 @@ public class BooksApiControllerTest {
       @DisplayName("Book With Author Returned")
       public void bookWithAuthorReturned() throws Exception {
         // given, when
+
         mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
                 .contentType(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
@@ -470,6 +476,134 @@ public class BooksApiControllerTest {
       mockMvc.perform(MockMvcRequestBuilders.put(TEST_URL)
               .contentType(MediaType.APPLICATION_JSON)
               .content(mapper.writeValueAsString(books)))
+          .andExpect(status().isOk())
+          .andDo(print());
+    }
+  }
+
+  @Nested
+  @DisplayName("Books Soon To Be Available")
+  class BooksSoonAvailable{
+
+    private static final String TEST_URL = "/soonAvailable/" + days;
+    private static final UUID ISBN2 = UUID.randomUUID();
+
+    @BeforeEach
+    public void setUp() {
+      Books book = Books.builder()
+          .id(id.toString())
+          .isbn(ISBN2.toString())
+          .title("Practical Modern JavaScript")
+          .author("Nicolás Bevacqua")
+          .availability(false)
+          .checkedOutUntil(LocalDate.now().toString())
+          .borrowingPeriodInDays(2L)
+          .build();
+
+      when(mockBooksService.availableSoon(2L)).thenReturn(List.of(book));
+    }
+    @Test
+    @DisplayName("List of Books Returned")
+    public void booksAvailableSoonReturned() throws Exception {
+      // given, when
+      mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+              .contentType(MediaType.APPLICATION_JSON))
+          .andExpect(status().isOk())
+          .andDo(print());
+    }
+  }
+  @Nested
+  @DisplayName("check-in-check-out-test")
+  class checkInCheckOutTest{
+
+      private static final String TEST_URL = "/checkin-checkout/" + id.toString();
+      private static final UUID ISBN2 = UUID.randomUUID();
+      private ObjectMapper mapper = new ObjectMapper();
+      @Test
+      public void booksCheckInCheckOut() throws Exception {
+        Books book1 = Books.builder()
+            .id(id.toString())
+            .isbn(ISBN.toString())
+            .title("Practical Modern JavaScript")
+            .author("Nicolás Bevacqua")
+            .availability(false)
+            .checkedOutUntil(LocalDate.now().toString())
+            .borrowingPeriodInDays(2L)
+            .build();
+
+        Books book2 = Books.builder()
+            .id(id.toString())
+            .isbn(ISBN2.toString())
+            .title( "SW Engineering for Dummies")
+            .author("John Doe")
+            .availability(true)
+            .checkedOutUntil(LocalDate.now().toString())
+            .borrowingPeriodInDays(0L)
+            .build();
+
+        book1.setAvailability(true);
+        book1.setCheckedOutUntil(LocalDate.now().toString());
+        book1.setBorrowingPeriodInDays(0L);
+        book2.setAvailability(false);
+        book2.setCheckedOutUntil(LocalDate.now().plusDays(7).toString());
+
+        when(mockBooksService.checkInAndCheckOut(book1)).thenReturn(book1);
+        when(mockBooksService.checkInAndCheckOut(book2)).thenReturn(book2);
+        // given, when
+        mockMvc.perform(MockMvcRequestBuilders.put(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON)
+            .content(mapper.writeValueAsString(book1))
+                .content(mapper.writeValueAsString(book2)))
+            .andExpect(status().isOk())
+            .andDo(print());
+      }
+    }
+  @Nested
+  @DisplayName("books-over-due-test")
+    class BooksOverDueTest{
+
+      private static final String TEST_URL = "/overdue-books";
+      @BeforeEach
+      public void setUp() {
+        Query query = new Query();
+        query.addCriteria(Criteria.where("borrowingPeriodInDays")
+            .gt(7L));
+        List<Books> results = mongoTemplate.find(query, Books.class);
+
+        when(mockBooksService.searchBooksOverDue()).thenReturn(results);
+      }
+      @Test
+      @DisplayName("List of Books Returned")
+      public void booksAvailableSoonReturned() throws Exception {
+        // given, when
+        mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+                .contentType(MediaType.APPLICATION_JSON))
+            .andExpect(status().isOk())
+            .andDo(print());
+      }
+    }
+  @Nested
+  @DisplayName("frequent-late-returned-books-test")
+  class FrequentLateReturnedBooksTest{
+
+    private static final String TEST_URL = "/late-returned-books";
+    @BeforeEach
+    public void setUp() {
+      Criteria criteria = new Criteria();
+      Query query = new Query();
+      criteria.andOperator(Criteria.where("borrowingPeriodInDays")
+          .gt(7L).and("availability").is(true));
+      query.addCriteria(criteria);
+      List<Books> results = mongoTemplate.find(query, Books.class);
+
+      when(mockBooksService.frequentLateReturns()).thenReturn(results);
+    }
+    @Test
+    @DisplayName("List of Books Returned late")
+    public void booksReturnedLate() throws Exception {
+      // given, when
+      mockMvc.perform(MockMvcRequestBuilders.get(TEST_URL)
+              .contentType(MediaType.APPLICATION_JSON))
           .andExpect(status().isOk())
           .andDo(print());
     }

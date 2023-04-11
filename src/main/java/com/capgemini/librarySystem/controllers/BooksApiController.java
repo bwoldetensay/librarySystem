@@ -120,8 +120,11 @@ public class BooksApiController {
   }
   @GetMapping("/overdue-books")
   public List<Books> getAllOverDueBooks(){
-
     return booksService.searchBooksOverDue();
+  }
+  @GetMapping("/late-returned-books")
+  public List<Books> getLateReturnedBooks(){
+    return booksService.frequentLateReturns();
   }
 
 }
